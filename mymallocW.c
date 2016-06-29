@@ -63,7 +63,7 @@ Chunk mymalloc_chunk_find(size_t s, Chunk *heap) { // Passar para worst
     //printf("huebr1 %p\n",c->next);
     while(c){
         //printf("huebrEntrouWhile\n");
-        if(c->next && c->next->size > maior){
+        if(c->next && c->next->size > maior && c->next->myfree == 1){
             //printf("huebrEntrou2if\n");
             maior = c->next->size;
             enderecoMaior = c->next;
